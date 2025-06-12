@@ -20,7 +20,7 @@
 `.env` 파일을 생성하여 Git 저장소와 기본 설정값을 입력합니다.
 
 ```env
-GIT_SYNC_REPO=https://github.com/YOUR_USERNAME/YOUR_REPO.git
+GITSYNC_REPO=https://github.com/YOUR_USERNAME/YOUR_REPO.git
 GIT_SYNC_BRANCH=main
 GIT_SYNC_ROOT=/repo
 GIT_SYNC_WAIT=30

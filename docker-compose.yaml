@@ -6,7 +6,7 @@ services:
     env_file:
       - .env
     environment:
-      - GIT_REPO=${GIT_REPO}
+      - GITSYNC_REPO=${GITSYNC_REPO}
       - GIT_SYNC_BRANCH=${GIT_SYNC_BRANCH}
       - GIT_SYNC_ROOT=${GIT_SYNC_ROOT}
       - GIT_SYNC_WAIT=${GIT_SYNC_WAIT}
