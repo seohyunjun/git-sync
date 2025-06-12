@@ -5,13 +5,14 @@
 ---
 
 ## 📁 프로젝트 구조
+``` plain-text
 .
 ├── docker-compose.yml       # git-sync 컨테이너 정의
 ├── entrypoint.sh            # 변경 감지 후 docker-compose 실행 스크립트
 ├── .env                     # 환경 변수 설정 파일
 ├── .gitignore               # Git 추적 제외 설정
 └── README.md                # 설명 파일
-
+```
 ---
 
 ## ⚙️ 환경 변수 설정 (.env)
