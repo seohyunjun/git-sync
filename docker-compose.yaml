@@ -1,0 +1,17 @@
+version: '3.9'
+services:
+  git-sync:
+    image: registry.k8s.io/git-sync/git-sync:v4.1.0
+    container_name: git-sync
+    env_file:
+      - .env
+    environment:
+      - GIT_SYNC_REPO=${GIT_SYNC_REPO}
+      - GIT_SYNC_BRANCH=${GIT_SYNC_BRANCH}
+      - GIT_SYNC_ROOT=${GIT_SYNC_ROOT}
+      - GIT_SYNC_WAIT=${GIT_SYNC_WAIT}
+      - GIT_SYNC_ONE_TIME=false
+    volumes:
+      - ./repo:${GIT_SYNC_ROOT}
+      - ./entrypoint.sh:/entrypoint.sh
+    command: ["/bin/sh", "/entrypoint.sh"]

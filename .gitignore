@@ -1,0 +1,13 @@
+# 환경 설정
+.env
+
+# Docker
+repo/
+*.log
+
+# 시스템 파일
+.DS_Store
+
+# IDE 설정
+.vscode/
+.idea/
