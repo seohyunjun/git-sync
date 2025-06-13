@@ -17,3 +17,8 @@ services:
       - ~/.ssh/git-sync:/etc/git-secret/ssh:ro
       - ~/.ssh/known_hosts:/etc/git-secret/known_hosts
     command: ["/bin/sh", "/entrypoint.sh"]
+  watcher:
+    image: alpine
+    volumes:
+      - ${UPDATE_REPO_DIR}:/repo
+    entrypoint: ["/bin/sh", "/repo/build.sh"]
