@@ -12,7 +12,7 @@ services:
       - GIT_SYNC_WAIT=${GIT_SYNC_WAIT}
       - GIT_SYNC_ONE_TIME=false
     volumes:
-      - ./repo:${GIT_SYNC_ROOT}
+      - ${DEST_DIR}:${GIT_SYNC_ROOT}
       - ./entrypoint.sh:/entrypoint.sh
       - ~/.ssh/git-sync:/etc/git-secret/ssh:ro
       - ~/.ssh/known_hosts:/etc/git-secret/known_hosts
