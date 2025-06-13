@@ -14,6 +14,6 @@ services:
     volumes:
       - ./repo:${GIT_SYNC_ROOT}
       - ./entrypoint.sh:/entrypoint.sh
-      - ~/.ssh/id_rsa:/etc/git-secret/ssh:ro
+      - ~/.ssh/git-sync:/etc/git-secret/ssh:ro
       - ~/.ssh/known_hosts:/etc/git-secret/known_hosts
     command: ["/bin/sh", "/entrypoint.sh"]
