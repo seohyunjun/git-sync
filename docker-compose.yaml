@@ -6,14 +6,14 @@ services:
     env_file:
       - .env
     environment:
-      - GITSYNC_REPO=${GITSYNC_REPO}
+      - GIT_SYNC_REPO=${GIT_SYNC_REPO}
       - GIT_SYNC_BRANCH=${GIT_SYNC_BRANCH}
       - GIT_SYNC_ROOT=${GIT_SYNC_ROOT}
       - GIT_SYNC_WAIT=${GIT_SYNC_WAIT}
-      - GITSYNC_ONE_TIME=false
+      - GIT_SYNC_ONE_TIME=false
     volumes:
       - ./repo:${GIT_SYNC_ROOT}
       - ./entrypoint.sh:/entrypoint.sh
       - ~/.ssh/id_rsa:/etc/git-secret/ssh:ro
-      - ~/.ssh/known_hosts:/etc/git-secret/known_hosts:ro
+      - ~/.ssh/known_hosts:/etc/git-secret/known_hosts
     command: ["/bin/sh", "/entrypoint.sh"]
