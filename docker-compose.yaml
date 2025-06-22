@@ -21,4 +21,4 @@ services:
     image: alpine
     volumes:
       - ${UPDATE_REPO_DIR}:/repo
-    entrypoint: ["/bin/sh", "/repo/build.sh"]
+    entrypoint: ["/bin/sh"]
