@@ -41,4 +41,3 @@ chmod +x entrypoint.sh
 - entrypoint.sh는 Git 저장소의 커밋 해시를 감지합니다.
 - 커밋이 변경되면 해당 저장소의 docker-compose.yml을 기준으로 docker-compose up -d --build를 자동 실행합니다.
 
-
